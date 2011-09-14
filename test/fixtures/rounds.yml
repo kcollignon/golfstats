@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  score: MyString
+  date: 2011-09-14
+
+two:
+  score: MyString
+  date: 2011-09-14

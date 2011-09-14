@@ -1,0 +1,33 @@
+
+
+<h1>Listing rounds</h1>
+
+
+
+<div class="div_content">
+<table id="myTable">
+  <tr>
+    <th scope="col">Date</th>
+    <th scope="col">Score</th>
+    <th scope="col">Course</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rounds.each do |round| %>
+  <tr>
+    <td><%= round.date %></td>
+    <td><%= round.score %></td>
+	<td><%= @course_played %></td>
+    <td><%= link_to 'View', round %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Round', new_round_path %>
+
+</div>
+
+
