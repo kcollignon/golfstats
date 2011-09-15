@@ -21,8 +21,16 @@
   </div>
   <div class="field">
     <%= f.label :course %><br />
-    <%= select("course", "name", Course.all.collect {|p| [p.name] }) %>
+    <%= f.collection_select(:course_name,
+	                           Course.all,
+	                            :name,
+	                            :name,
+	                            { :prompt => true })
+	 %>
   </div>
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

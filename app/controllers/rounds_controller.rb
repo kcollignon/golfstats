@@ -4,7 +4,6 @@ class RoundsController < ApplicationController
   def index
     @rounds = Round.all
 
-    @course_played = Course.find(1)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,6 +27,7 @@ class RoundsController < ApplicationController
   def new
     @round = Round.new
 
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @round }
@@ -43,6 +43,7 @@ class RoundsController < ApplicationController
   # POST /rounds.xml
   def create
     @round = Round.new(params[:round])
+    
 
     respond_to do |format|
       if @round.save
